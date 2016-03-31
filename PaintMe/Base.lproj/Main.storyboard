@@ -22,44 +22,44 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleAspectFill" distribution="equalCentering" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="f4g-nw-1CO">
-                                <rect key="frame" x="20" y="550" width="560" height="50"/>
+                                <rect key="frame" x="20" y="540" width="560" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Hp-cY-Niw">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Hp-cY-Niw" userLabel="Blue">
                                         <rect key="frame" x="0.0" y="0.0" width="53" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="53" id="Bmx-UA-9od"/>
                                         </constraints>
                                         <state key="normal" image="blue"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyj-m3-6TB">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyj-m3-6TB" userLabel="Green">
                                         <rect key="frame" x="101" y="0.0" width="53" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="53" id="0pc-aP-gja"/>
                                         </constraints>
                                         <state key="normal" image="green"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4h3-FF-rHn">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4h3-FF-rHn" userLabel="Yellow">
                                         <rect key="frame" x="203" y="0.0" width="53" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="53" id="zi6-wQ-9Nt"/>
                                         </constraints>
                                         <state key="normal" image="yellow"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Sn-Ie-nsI">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Sn-Ie-nsI" userLabel="Red">
                                         <rect key="frame" x="304" y="0.0" width="53" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="53" id="RfT-Zs-Wdh"/>
                                         </constraints>
                                         <state key="normal" image="red"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1DG-bN-QyH">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1DG-bN-QyH" userLabel="Random">
                                         <rect key="frame" x="406" y="0.0" width="53" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="53" id="mp6-2k-hQK"/>
                                         </constraints>
                                         <state key="normal" image="random" backgroundImage="random"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83i-7S-ffW">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83i-7S-ffW" userLabel="Settings">
                                         <rect key="frame" x="507" y="0.0" width="53" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="53" id="1fe-Kx-DsC"/>
@@ -75,7 +75,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MYh-LC-RfX" secondAttribute="bottom" id="ChG-Es-rpc"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="f4g-nw-1CO" secondAttribute="bottom" id="O96-P5-Ckh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="f4g-nw-1CO" secondAttribute="bottom" constant="10" id="O96-P5-Ckh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MYh-LC-RfX" secondAttribute="trailing" constant="-20" id="VRJ-Nl-7gt"/>
                             <constraint firstItem="MYh-LC-RfX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="YJi-1A-4hU"/>
                             <constraint firstItem="f4g-nw-1CO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ZD1-El-stg"/>
@@ -83,6 +83,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="f4g-nw-1CO" secondAttribute="trailing" id="qnD-so-CD1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="canvas" destination="MYh-LC-RfX" id="VMp-RX-O9r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
