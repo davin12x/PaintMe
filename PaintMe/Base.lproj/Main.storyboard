@@ -30,6 +30,9 @@
                                             <constraint firstAttribute="width" constant="53" id="Bmx-UA-9od"/>
                                         </constraints>
                                         <state key="normal" image="blue"/>
+                                        <connections>
+                                            <action selector="blueTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="db3-nM-Oef"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyj-m3-6TB" userLabel="Green">
                                         <rect key="frame" x="101" y="0.0" width="53" height="50"/>
@@ -37,6 +40,9 @@
                                             <constraint firstAttribute="width" constant="53" id="0pc-aP-gja"/>
                                         </constraints>
                                         <state key="normal" image="green"/>
+                                        <connections>
+                                            <action selector="greenTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dhz-b1-e1b"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4h3-FF-rHn" userLabel="Yellow">
                                         <rect key="frame" x="203" y="0.0" width="53" height="50"/>
@@ -44,6 +50,9 @@
                                             <constraint firstAttribute="width" constant="53" id="zi6-wQ-9Nt"/>
                                         </constraints>
                                         <state key="normal" image="yellow"/>
+                                        <connections>
+                                            <action selector="yellowTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H8E-Z0-xed"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Sn-Ie-nsI" userLabel="Red">
                                         <rect key="frame" x="304" y="0.0" width="53" height="50"/>
@@ -51,6 +60,9 @@
                                             <constraint firstAttribute="width" constant="53" id="RfT-Zs-Wdh"/>
                                         </constraints>
                                         <state key="normal" image="red"/>
+                                        <connections>
+                                            <action selector="redTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ced-wR-OhQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1DG-bN-QyH" userLabel="Random">
                                         <rect key="frame" x="406" y="0.0" width="53" height="50"/>
@@ -58,6 +70,9 @@
                                             <constraint firstAttribute="width" constant="53" id="mp6-2k-hQK"/>
                                         </constraints>
                                         <state key="normal" image="random" backgroundImage="random"/>
+                                        <connections>
+                                            <action selector="randomTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FUq-mB-Mfb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83i-7S-ffW" userLabel="Settings">
                                         <rect key="frame" x="507" y="0.0" width="53" height="50"/>
@@ -65,35 +80,90 @@
                                             <constraint firstAttribute="width" constant="53" id="1fe-Kx-DsC"/>
                                         </constraints>
                                         <state key="normal" image="settings"/>
+                                        <connections>
+                                            <action selector="onSettingPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uhm-FR-pUy"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="SP9-dg-gga"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4o-nz-IPC">
+                                <rect key="frame" x="516" y="462" width="64" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="Xic-gN-mKx"/>
+                                    <constraint firstAttribute="height" constant="53" id="s4R-ZU-KhY"/>
+                                </constraints>
+                                <state key="normal" image="eraser-309830_1280"/>
+                                <connections>
+                                    <action selector="eraserTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zaz-nS-StO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MYh-LC-RfX" secondAttribute="bottom" id="ChG-Es-rpc"/>
+                            <constraint firstItem="f4g-nw-1CO" firstAttribute="top" secondItem="c4o-nz-IPC" secondAttribute="bottom" constant="25" id="LUJ-I9-tb4"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="f4g-nw-1CO" secondAttribute="bottom" constant="10" id="O96-P5-Ckh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MYh-LC-RfX" secondAttribute="trailing" constant="-20" id="VRJ-Nl-7gt"/>
                             <constraint firstItem="MYh-LC-RfX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="YJi-1A-4hU"/>
                             <constraint firstItem="f4g-nw-1CO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ZD1-El-stg"/>
+                            <constraint firstItem="c4o-nz-IPC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gnc-No-6rL"/>
                             <constraint firstItem="MYh-LC-RfX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="qIq-gI-hIc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="f4g-nw-1CO" secondAttribute="trailing" id="qnD-so-CD1"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="canvas" destination="MYh-LC-RfX" id="VMp-RX-O9r"/>
+                        <outlet property="slider" destination="HaL-tS-CG8" id="Ems-Mw-u6M"/>
+                        <segue destination="vEL-l4-7Nw" kind="show" identifier="SettingVC" id="cUn-kY-bfF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="262" y="339"/>
         </scene>
+        <!--SettingVC-->
+        <scene sceneID="8aF-O2-qsJ">
+            <objects>
+                <viewController id="vEL-l4-7Nw" userLabel="SettingVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UWr-3q-LIM"/>
+                        <viewControllerLayoutGuide type="bottom" id="87Q-fR-fxx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tT1-Ww-3kS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="HaL-tS-CG8">
+                                <rect key="frame" x="18" y="125" width="564" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Brush Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYj-GN-yd3">
+                                <rect key="frame" x="236" y="74" width="129" height="37"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
+                                <color key="textColor" red="0.71806837248322153" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="1" green="0.17510719764211591" blue="0.3421675287026108" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pYj-GN-yd3" firstAttribute="centerX" secondItem="tT1-Ww-3kS" secondAttribute="centerX" id="9iY-ZK-gzJ"/>
+                            <constraint firstItem="HaL-tS-CG8" firstAttribute="top" secondItem="pYj-GN-yd3" secondAttribute="bottom" constant="17" id="Qsl-cn-3nx"/>
+                            <constraint firstItem="pYj-GN-yd3" firstAttribute="top" secondItem="UWr-3q-LIM" secondAttribute="bottom" constant="54" id="Z5c-Oo-Oax"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HaL-tS-CG8" secondAttribute="trailing" id="cXa-to-0bR"/>
+                            <constraint firstItem="HaL-tS-CG8" firstAttribute="leading" secondItem="tT1-Ww-3kS" secondAttribute="leadingMargin" id="hOB-Tr-2wu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p64-gJ-rna" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="962" y="389"/>
+        </scene>
     </scenes>
     <resources>
         <image name="blue" width="214" height="214"/>
+        <image name="eraser-309830_1280" width="1280" height="1082"/>
         <image name="green" width="214" height="214"/>
         <image name="random" width="214" height="214"/>
         <image name="red" width="214" height="214"/>
