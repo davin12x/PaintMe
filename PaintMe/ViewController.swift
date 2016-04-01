@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var canvas:UIImageView?
-    @IBOutlet weak var slider:UISlider?
+    
     var count = 0
     var red : CGFloat = 0
     var blue : CGFloat = 0
@@ -28,15 +28,10 @@ class ViewController: UIViewController {
     }
     override func viewDidAppear(animated: Bool) {
         
-        self.slider?.addTarget(self, action: #selector(ViewController.sliderValueChange(_:)), forControlEvents: UIControlEvents.ValueChanged)
-        slider?.thumbTintColor = UIColor.blueColor()
-        slider?.maximumTrackTintColor = UIColor.greenColor()
-        slider?.minimumTrackTintColor = UIColor.redColor()
-        slider?.thumbImageForState(.Selected)
+       
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
-    func sliderValueChange(sender:UIControlEvents){
-        strokeWidth = CGFloat((slider?.value)!)
-    }
+   
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let touch = touches.first{
             let point = touch.locationInView(self.canvas)

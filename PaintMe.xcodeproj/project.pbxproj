@@ -58,11 +58,11 @@
 			children = (
 				0A9810FA1CAC9C3C005C90D6 /* AppDelegate.swift */,
 				0A9810FC1CAC9C3C005C90D6 /* ViewController.swift */,
+				0A98110C1CACF365005C90D6 /* SettingVC.swift */,
 				0A9810FE1CAC9C3C005C90D6 /* Main.storyboard */,
 				0A9811011CAC9C3C005C90D6 /* Assets.xcassets */,
 				0A9811031CAC9C3C005C90D6 /* LaunchScreen.storyboard */,
 				0A9811061CAC9C3D005C90D6 /* Info.plist */,
-				0A98110C1CACF365005C90D6 /* SettingVC.swift */,
 			);
 			path = PaintMe;
 			sourceTree = "<group>";
@@ -292,6 +292,7 @@
 				0A98110B1CAC9C3D005C90D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

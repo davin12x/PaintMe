@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FFs-92-vXE">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -114,6 +114,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="f4g-nw-1CO" secondAttribute="trailing" id="qnD-so-CD1"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="nL8-VW-2q0"/>
                     <connections>
                         <outlet property="canvas" destination="MYh-LC-RfX" id="VMp-RX-O9r"/>
                         <outlet property="slider" destination="HaL-tS-CG8" id="Ems-Mw-u6M"/>
@@ -122,12 +123,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="262" y="339"/>
+            <point key="canvasLocation" x="1074" y="339"/>
         </scene>
         <!--SettingVC-->
         <scene sceneID="8aF-O2-qsJ">
             <objects>
-                <viewController id="vEL-l4-7Nw" userLabel="SettingVC" sceneMemberID="viewController">
+                <viewController id="vEL-l4-7Nw" userLabel="SettingVC" customClass="SettingVC" customModule="PaintMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UWr-3q-LIM"/>
                         <viewControllerLayoutGuide type="bottom" id="87Q-fR-fxx"/>
@@ -136,8 +137,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="HaL-tS-CG8">
-                                <rect key="frame" x="18" y="125" width="564" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="HaL-tS-CG8">
+                                <rect key="frame" x="18" y="169" width="564" height="31"/>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Brush Size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYj-GN-yd3">
                                 <rect key="frame" x="236" y="74" width="129" height="37"/>
@@ -145,24 +146,59 @@
                                 <color key="textColor" red="0.71806837248322153" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="1" green="0.17510719764211591" blue="0.3421675287026108" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1e-cM-tnH">
+                                <rect key="frame" x="189" y="384" width="223" height="171"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="223" id="MX0-Ui-kjC"/>
+                                    <constraint firstAttribute="height" constant="171" id="Vse-zx-lgM"/>
+                                </constraints>
+                                <state key="normal" image="cloud-709104_640"/>
+                                <connections>
+                                    <action selector="onPostPressed:" destination="vEL-l4-7Nw" eventType="touchUpInside" id="OFC-iB-hTX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pYj-GN-yd3" firstAttribute="centerX" secondItem="tT1-Ww-3kS" secondAttribute="centerX" id="9iY-ZK-gzJ"/>
+                            <constraint firstItem="T1e-cM-tnH" firstAttribute="centerX" secondItem="tT1-Ww-3kS" secondAttribute="centerX" id="NgF-Bn-8Wa"/>
                             <constraint firstItem="HaL-tS-CG8" firstAttribute="top" secondItem="pYj-GN-yd3" secondAttribute="bottom" constant="17" id="Qsl-cn-3nx"/>
                             <constraint firstItem="pYj-GN-yd3" firstAttribute="top" secondItem="UWr-3q-LIM" secondAttribute="bottom" constant="54" id="Z5c-Oo-Oax"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HaL-tS-CG8" secondAttribute="trailing" id="cXa-to-0bR"/>
                             <constraint firstItem="HaL-tS-CG8" firstAttribute="leading" secondItem="tT1-Ww-3kS" secondAttribute="leadingMargin" id="hOB-Tr-2wu"/>
+                            <constraint firstItem="87Q-fR-fxx" firstAttribute="top" secondItem="T1e-cM-tnH" secondAttribute="bottom" constant="45" id="jXW-qx-EUL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="slider" destination="HaL-tS-CG8" id="oNg-Wz-otr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p64-gJ-rna" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="962" y="389"/>
+            <point key="canvasLocation" x="1774" y="389"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5Ka-aI-x3N">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FFs-92-vXE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7xy-0K-3LW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0LG-8S-W4f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Tx-MR-REI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="262" y="339"/>
         </scene>
     </scenes>
     <resources>
         <image name="blue" width="214" height="214"/>
+        <image name="cloud-709104_640" width="640" height="640"/>
         <image name="eraser-309830_1280" width="1280" height="1082"/>
         <image name="green" width="214" height="214"/>
         <image name="random" width="214" height="214"/>
