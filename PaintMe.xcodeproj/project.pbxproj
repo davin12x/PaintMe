@@ -13,9 +13,12 @@
 		0A9811021CAC9C3C005C90D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A9811011CAC9C3C005C90D6 /* Assets.xcassets */; };
 		0A9811051CAC9C3C005C90D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A9811031CAC9C3C005C90D6 /* LaunchScreen.storyboard */; };
 		0A98110D1CACF365005C90D6 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98110C1CACF365005C90D6 /* SettingVC.swift */; };
+		0AB731C41CAE2C030096DBC1 /* roundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB731C31CAE2C030096DBC1 /* roundedButton.swift */; };
+		378E96AC185D639FA6B58CB3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0625E0E36D64CB2A3273B5A4 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0625E0E36D64CB2A3273B5A4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A9810F71CAC9C3C005C90D6 /* PaintMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaintMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A9810FA1CAC9C3C005C90D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A9810FC1CAC9C3C005C90D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		0A9811041CAC9C3C005C90D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A9811061CAC9C3D005C90D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A98110C1CACF365005C90D6 /* SettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		0AB731C31CAE2C030096DBC1 /* roundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = roundedButton.swift; sourceTree = "<group>"; };
+		369E49FA73DAB03C3841EA2C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DE443336FD8B189744A32A08 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				378E96AC185D639FA6B58CB3 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				0A9810F91CAC9C3C005C90D6 /* PaintMe */,
 				0A9810F81CAC9C3C005C90D6 /* Products */,
+				34C68D002F3668BDAA4CF7A7 /* Pods */,
+				4E03AD1E51122E4B6E481CA0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +65,49 @@
 		0A9810F91CAC9C3C005C90D6 /* PaintMe */ = {
 			isa = PBXGroup;
 			children = (
+				0AB731C51CAE2CA10096DBC1 /* Controller */,
+				0AB731C21CAE2BD60096DBC1 /* View */,
 				0A9810FA1CAC9C3C005C90D6 /* AppDelegate.swift */,
-				0A9810FC1CAC9C3C005C90D6 /* ViewController.swift */,
-				0A98110C1CACF365005C90D6 /* SettingVC.swift */,
 				0A9810FE1CAC9C3C005C90D6 /* Main.storyboard */,
 				0A9811011CAC9C3C005C90D6 /* Assets.xcassets */,
 				0A9811031CAC9C3C005C90D6 /* LaunchScreen.storyboard */,
 				0A9811061CAC9C3D005C90D6 /* Info.plist */,
 			);
 			path = PaintMe;
+			sourceTree = "<group>";
+		};
+		0AB731C21CAE2BD60096DBC1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0AB731C31CAE2C030096DBC1 /* roundedButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0AB731C51CAE2CA10096DBC1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0A9810FC1CAC9C3C005C90D6 /* ViewController.swift */,
+				0A98110C1CACF365005C90D6 /* SettingVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		34C68D002F3668BDAA4CF7A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				369E49FA73DAB03C3841EA2C /* Pods.debug.xcconfig */,
+				DE443336FD8B189744A32A08 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4E03AD1E51122E4B6E481CA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0625E0E36D64CB2A3273B5A4 /* Pods.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +117,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A9811091CAC9C3D005C90D6 /* Build configuration list for PBXNativeTarget "PaintMe" */;
 			buildPhases = (
+				5FB7FF5F19C39034E33A3E14 /* Check Pods Manifest.lock */,
 				0A9810F31CAC9C3C005C90D6 /* Sources */,
 				0A9810F41CAC9C3C005C90D6 /* Frameworks */,
 				0A9810F51CAC9C3C005C90D6 /* Resources */,
+				1B06F33A69736A26F19DF413 /* Embed Pods Frameworks */,
+				D117F52D0D9CE0A8A54EA1BC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,6 +179,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B06F33A69736A26F19DF413 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FB7FF5F19C39034E33A3E14 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D117F52D0D9CE0A8A54EA1BC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0A9810F31CAC9C3C005C90D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -141,6 +235,7 @@
 				0A9810FD1CAC9C3C005C90D6 /* ViewController.swift in Sources */,
 				0A98110D1CACF365005C90D6 /* SettingVC.swift in Sources */,
 				0A9810FB1CAC9C3C005C90D6 /* AppDelegate.swift in Sources */,
+				0AB731C41CAE2C030096DBC1 /* roundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +348,7 @@
 		};
 		0A98110A1CAC9C3D005C90D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 369E49FA73DAB03C3841EA2C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PaintMe/Info.plist;
@@ -264,6 +360,7 @@
 		};
 		0A98110B1CAC9C3D005C90D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE443336FD8B189744A32A08 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PaintMe/Info.plist;

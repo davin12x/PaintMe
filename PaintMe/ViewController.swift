@@ -7,11 +7,26 @@
 //
 
 import UIKit
+import RappleColorPicker
 
-class ViewController: UIViewController {
+extension UIColor {
+    func RGB() -> (red:CGFloat,green:CGFloat,blue:CGFloat) {
+        let components = CGColorGetComponents(self.CGColor)
+        let red = CGFloat(components[0])
+        let green = CGFloat(components[1])
+        let blue = CGFloat(components[2])
+        return(red * 255 ,green * 255 ,blue * 255)
+        
+        //Returning Hexa Value
+//        return String(format: "#%02lX%02lX%02lX", lroundf(red * 255), lroundf(green * 255), lroundf(blue * 255))
+    }
+}
+class ViewController: UIViewController,RappleColorPickerDelegate {
     
+    var colourPlallate = RappleColorPicker()
     @IBOutlet weak var canvas:UIImageView?
-    
+    @IBOutlet weak var chooseColorButton:roundedButton?
+    var colourer: UIColor?
     var count = 0
     var red : CGFloat = 0
     var blue : CGFloat = 0
@@ -22,16 +37,22 @@ class ViewController: UIViewController {
     var random = false
     var eraser = false
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
     override func viewDidAppear(animated: Bool) {
-        
-       
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
-   
+    func colorSelected(color: UIColor) {
+        chooseColorButton?.layer.backgroundColor = color.CGColor
+        let rgb = color.RGB()
+        //self.view.backgroundColor = color
+        colour(rgb.red, green: rgb.green, blue: rgb.blue, alpha: 1)
+        RappleColorPicker.close()
+    }
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let touch = touches.first{
             let point = touch.locationInView(self.canvas)
@@ -39,7 +60,6 @@ class ViewController: UIViewController {
             
         }
     }
-    
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let touch = touches.first{
             let point = touch.locationInView(self.canvas)
@@ -58,7 +78,7 @@ class ViewController: UIViewController {
                 mixColour()
             }
             if eraser == true{
-                CGContextSetBlendMode(context, .Clear)
+                CGContextSetBlendMode(context, .Copy)
             }
             self.canvas?.image?.drawInRect(rect)
             CGContextMoveToPoint(context, self.firstPoint.x, self.firstPoint.y)
@@ -90,14 +110,24 @@ class ViewController: UIViewController {
         randomAndEraserFalse()
     }
     @IBAction func eraserTapped(sender:UIButton){
-        colour(255, green:255, blue: 255, alpha: 1)
-        randomAndEraserFalse()
+        colour(255, green:255, blue: 255, alpha: 0)
+        eraser = true
+        random = false
     }
     @IBAction func randomTapped(sender:UIButton){
         random = true
     }
     @IBAction func onSettingPressed(sender:UIButton){
         performSegueWithIdentifier("SettingVC", sender: nil)
+        
+    }
+    @IBAction func onClearPressed(sender:UIButton){
+        self.canvas?.image = nil
+    }
+    @IBAction func chooseColourPressed(sender: AnyObject) {
+        
+        RappleColorPicker.openColorPallet(onViewController: self, origin: CGPointMake(50, 100), delegate: self, title : "Colors")
+        randomAndEraserFalse()
         
     }
     func mixColour(){
@@ -118,9 +148,10 @@ class ViewController: UIViewController {
         if segue.identifier == "SettingVC"{
             let settingVc = segue.destinationViewController as? SettingVC
             settingVc?.drawingVC = self
-           
+            
         }
     }
     
 }
+
 
