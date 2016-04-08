@@ -117,6 +117,7 @@ class ViewController: UIViewController,RappleColorPickerDelegate {
     @IBAction func randomTapped(sender:UIButton){
         random = true
     }
+    @IBOutlet weak var monkey: UIImageView!
     @IBAction func onSettingPressed(sender:UIButton){
         performSegueWithIdentifier("SettingVC", sender: nil)
         
