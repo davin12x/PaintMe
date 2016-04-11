@@ -29,12 +29,5 @@ class SettingVC: UIViewController {
         //Passing Value to ViewController
         drawingVC.strokeWidth = self.strokeWidth
     }
-    @IBAction func onPostPressed(sender:UIButton){
-        if let img = self.drawingVC.canvas?.image{
-          let activityVC = UIActivityViewController(activityItems: [img], applicationActivities: nil)
-            self.presentViewController(activityVC, animated: true, completion: nil)
-        }
-        
-        
-    }
+    
 }

@@ -14,6 +14,7 @@
 		0A9811051CAC9C3C005C90D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A9811031CAC9C3C005C90D6 /* LaunchScreen.storyboard */; };
 		0A98110D1CACF365005C90D6 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98110C1CACF365005C90D6 /* SettingVC.swift */; };
 		0AB731C41CAE2C030096DBC1 /* roundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB731C31CAE2C030096DBC1 /* roundedButton.swift */; };
+		0AF4E17D1CBC4A24006F33C0 /* Horn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0AF4E17C1CBC4A24006F33C0 /* Horn.mp3 */; };
 		378E96AC185D639FA6B58CB3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0625E0E36D64CB2A3273B5A4 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		0A9811061CAC9C3D005C90D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A98110C1CACF365005C90D6 /* SettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		0AB731C31CAE2C030096DBC1 /* roundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = roundedButton.swift; sourceTree = "<group>"; };
+		0AF4E17C1CBC4A24006F33C0 /* Horn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Horn.mp3; sourceTree = "<group>"; };
 		369E49FA73DAB03C3841EA2C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DE443336FD8B189744A32A08 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +67,7 @@
 		0A9810F91CAC9C3C005C90D6 /* PaintMe */ = {
 			isa = PBXGroup;
 			children = (
+				0AF4E17C1CBC4A24006F33C0 /* Horn.mp3 */,
 				0AB731C51CAE2CA10096DBC1 /* Controller */,
 				0AB731C21CAE2BD60096DBC1 /* View */,
 				0A9810FA1CAC9C3C005C90D6 /* AppDelegate.swift */,
@@ -172,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A9811051CAC9C3C005C90D6 /* LaunchScreen.storyboard in Resources */,
+				0AF4E17D1CBC4A24006F33C0 /* Horn.mp3 in Resources */,
 				0A9811021CAC9C3C005C90D6 /* Assets.xcassets in Resources */,
 				0A9811001CAC9C3C005C90D6 /* Main.storyboard in Resources */,
 			);
