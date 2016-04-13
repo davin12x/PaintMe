@@ -11,8 +11,8 @@ import UIKit
 class SettingVC: UIViewController {
     @IBOutlet weak var slider:UISlider?
     var drawingVC = ViewController()
-    var strokeWidth:CGFloat = 10
-    var sliderValue:Float = 0
+    var strokeWidth:CGFloat = 2
+    var sliderValue:Float = 1
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = false

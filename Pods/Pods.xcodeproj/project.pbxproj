@@ -52,29 +52,33 @@
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
 		</dict>
-		<key>1D0F476FE9EEC42D35C5F8465C7E1191</key>
+		<key>126365E25E08830D61C9623D165E3E4A</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>EE33A2963AB887D7EB32B694E4ABCAAF</string>
+				<string>B44F0A5AB1357607A64F825227AF9515</string>
+				<string>75F3CF8268D7A82B82207EC77C185124</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>RappleColorPicker</string>
 			<key>path</key>
-			<string>Info.plist</string>
+			<string>RappleColorPicker</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>2606037036AB9EDBE7D4DBAEA9694EA8</key>
+		<key>1447DE20FD908130A2D973A42F9DBC7D</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>AD58C45C61A6955BFBD89BD473BA99A2</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>RappleColorPicker.xcconfig</string>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -107,6 +111,19 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
+		<key>2C1F8EA94629C7B4C37D633FA3EADBF3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>RappleColorPicker-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>2C48F4C61D09383A1B989EC4A5DD18FE</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -119,6 +136,20 @@
 			<string>PBXHeadersBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
+		</dict>
+		<key>2C5A80FC39CDB1E32828CB9BD089614A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E9882C22BDD25A5A97586675BDF7FAE0</string>
+				<string>126365E25E08830D61C9623D165E3E4A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
 		<dict>
@@ -186,19 +217,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>3B89F74B23870A729C8643E3389CD95D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>RappleColorPicker-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>3E4E89230EF59BC255123B67864ACF77</key>
 		<dict>
 			<key>isa</key>
@@ -229,7 +247,7 @@
 		<key>423CED3D79024DD330DB79733F754118</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E47998FBB3D7D606F747CA93A5C47C42</string>
+			<string>B44F0A5AB1357607A64F825227AF9515</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -338,7 +356,7 @@
 		<key>57B39A0630D726A27441F3EE42BDEF63</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>2606037036AB9EDBE7D4DBAEA9694EA8</string>
+			<string>69D07723C03A1640DD234B81704DA5BD</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -434,6 +452,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>69D07723C03A1640DD234B81704DA5BD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>RappleColorPicker.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>6C548ACE93BAA9CD5521AD9ABBB76DA2</key>
 		<dict>
 			<key>fileRef</key>
@@ -478,16 +509,23 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>76416E78FA7D9156A26C062422AAD77A</key>
+		<key>75F3CF8268D7A82B82207EC77C185124</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>F8B67426A9C2F9B91A02A1992A117BDA</string>
+				<string>CB7A0CED4060DF6CBC89796A0F1530E1</string>
+				<string>69D07723C03A1640DD234B81704DA5BD</string>
+				<string>2C1F8EA94629C7B4C37D633FA3EADBF3</string>
+				<string>8D742DD70C8CB78D9FD07FF0BBDDC1F2</string>
+				<string>EBB52D3B59AE32EC70A187DC1ACA85E2</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
 			<key>path</key>
-			<string>RappleColorPicker-umbrella.h</string>
+			<string>../Target Support Files/RappleColorPicker</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -497,7 +535,7 @@
 			<array>
 				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
 				<string>BC3CA7F9E30CC8F7E2DD044DD34432FC</string>
-				<string>EBF38D0D64519C3CE392592E345AE434</string>
+				<string>2C5A80FC39CDB1E32828CB9BD089614A</string>
 				<string>9D140462A66347185D63EC5B32BAA6E4</string>
 				<string>F2A0151918469501CEBF68482029A093</string>
 			</array>
@@ -529,34 +567,6 @@
 			<string>text.plist.xml</string>
 			<key>path</key>
 			<string>Pods-PaintMe-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>84D392A73F6B57B389D345879BA1F5A6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>RappleColorPicker.swift</string>
-			<key>path</key>
-			<string>Pod/Classes/RappleColorPicker.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8AC32695EC537D7BE22A739A711C40E5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>RappleColorPicker-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -635,10 +645,23 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
+		<key>8D742DD70C8CB78D9FD07FF0BBDDC1F2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>RappleColorPicker-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>91F18CBA908B715DF2BD18B3AB4A9850</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>2606037036AB9EDBE7D4DBAEA9694EA8</string>
+			<string>69D07723C03A1640DD234B81704DA5BD</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -843,7 +866,7 @@
 		<key>A5A2CF37126B140A0CCC2D6CC2DC877F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>84D392A73F6B57B389D345879BA1F5A6</string>
+			<string>EE33A2963AB887D7EB32B694E4ABCAAF</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -944,23 +967,16 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>B04E4D4922F8E72AC1CB9F3F3B7DDB7A</key>
+		<key>AD58C45C61A6955BFBD89BD473BA99A2</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>1D0F476FE9EEC42D35C5F8465C7E1191</string>
-				<string>ED2ECE788318CD6A5C13F6399903BFF2</string>
-				<string>2606037036AB9EDBE7D4DBAEA9694EA8</string>
-				<string>8AC32695EC537D7BE22A739A711C40E5</string>
-				<string>3B89F74B23870A729C8643E3389CD95D</string>
-				<string>76416E78FA7D9156A26C062422AAD77A</string>
-			</array>
 			<key>isa</key>
-			<string>PBXGroup</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
 			<key>name</key>
-			<string>Support Files</string>
+			<string>GoogleMobileAds.framework</string>
 			<key>path</key>
-			<string>../Target Support Files/RappleColorPicker</string>
+			<string>GoogleMobileAdsSdkiOS-7.7.1/GoogleMobileAds.framework</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -991,7 +1007,7 @@
 		<key>B1F43FFF06ED7646E47EC43C5786E6AC</key>
 		<dict>
 			<key>fileRef</key>
-			<string>76416E78FA7D9156A26C062422AAD77A</string>
+			<string>EBB52D3B59AE32EC70A187DC1ACA85E2</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1001,6 +1017,21 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>B44F0A5AB1357607A64F825227AF9515</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>RappleColorPickerViewController.swift</string>
+			<key>path</key>
+			<string>Pod/Classes/RappleColorPickerViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>B61EB7ADB3C8476423256C28C1C9EB96</key>
 		<dict>
@@ -1205,6 +1236,17 @@
 				</array>
 			</dict>
 		</dict>
+		<key>CB7A0CED4060DF6CBC89796A0F1530E1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>RappleColorPicker.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>CD21BAD29E284B1BCFAD74255A12A349</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1369,7 +1411,42 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>E47998FBB3D7D606F747CA93A5C47C42</key>
+		<key>E9882C22BDD25A5A97586675BDF7FAE0</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1447DE20FD908130A2D973A42F9DBC7D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Google-Mobile-Ads-SDK</string>
+			<key>path</key>
+			<string>Google-Mobile-Ads-SDK</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E9AD6E9393A9CC5C49A5DDBB8D05C0E7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2C1F8EA94629C7B4C37D633FA3EADBF3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EBB52D3B59AE32EC70A187DC1ACA85E2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>RappleColorPicker-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EE33A2963AB887D7EB32B694E4ABCAAF</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1378,57 +1455,9 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
 			<key>name</key>
-			<string>RappleColorPickerViewController.swift</string>
+			<string>RappleColorPicker.swift</string>
 			<key>path</key>
-			<string>Pod/Classes/RappleColorPickerViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E7119FEC132BD49DF148E554CCB9E5C5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>84D392A73F6B57B389D345879BA1F5A6</string>
-				<string>E47998FBB3D7D606F747CA93A5C47C42</string>
-				<string>B04E4D4922F8E72AC1CB9F3F3B7DDB7A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>RappleColorPicker</string>
-			<key>path</key>
-			<string>RappleColorPicker</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E9AD6E9393A9CC5C49A5DDBB8D05C0E7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8AC32695EC537D7BE22A739A711C40E5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EBF38D0D64519C3CE392592E345AE434</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E7119FEC132BD49DF148E554CCB9E5C5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>ED2ECE788318CD6A5C13F6399903BFF2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>RappleColorPicker.modulemap</string>
+			<string>Pod/Classes/RappleColorPicker.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1467,6 +1496,19 @@
 			<string>RappleColorPicker.framework</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>F8B67426A9C2F9B91A02A1992A117BDA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>FB45FFD90572718D82AB9092B750F0CA</key>
 		<dict>

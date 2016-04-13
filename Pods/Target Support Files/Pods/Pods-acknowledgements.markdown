@@ -1,6 +1,10 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
+## Google-Mobile-Ads-SDK
+
+Copyright 2011 Google Inc. All Rights Reserved.
+
 ## RappleColorPicker
 
 Copyright (c) 2015 Rajeev Prasad <rjeprasad@gmail.com>

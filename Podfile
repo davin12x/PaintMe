@@ -3,6 +3,7 @@
 # Uncomment this line if you're using Swift
 use_frameworks!
 pod "RappleColorPicker"
+pod 'Google-Mobile-Ads-SDK', '~> 7.0'
 target 'PaintMe' do
 
 end
