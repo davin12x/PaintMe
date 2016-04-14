@@ -10,6 +10,7 @@ import UIKit
 import RappleColorPicker
 import AVFoundation
 import GoogleMobileAds
+import StoreKit
 
 extension UIColor {
     func RGB() -> (red:CGFloat,green:CGFloat,blue:CGFloat) {
@@ -22,7 +23,7 @@ extension UIColor {
         //        return String(format: "#%02lX%02lX%02lX", lroundf(red * 255), lroundf(green * 255), lroundf(blue * 255))
     }
 }
-class ViewController: UIViewController,RappleColorPickerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController,RappleColorPickerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, SKProductsRequestDelegate {
     @IBOutlet weak var googleAd: GADBannerView!
     @IBOutlet weak var camera: UIImageView!
     @IBOutlet weak var backImage: UIImageView!
@@ -73,6 +74,8 @@ class ViewController: UIViewController,RappleColorPickerDelegate, UIImagePickerC
         cameraTapped.numberOfTapsRequired = 1
         camera.addGestureRecognizer(cameraTapped)
         camera.userInteractionEnabled = true
+        
+        requestProduct()
     }
     func playAudio(){
         audioPlayer.play()
@@ -89,7 +92,16 @@ class ViewController: UIViewController,RappleColorPickerDelegate, UIImagePickerC
         return newImage
         
     }
-    
+    func requestProduct(){
+        let ids:Set<String> = ["com.Bagga.PaintMe"]
+        let productsRequest = SKProductsRequest(productIdentifiers: ids)
+        productsRequest.delegate = self
+        productsRequest.start()
+    }
+    func productsRequest(request: SKProductsRequest, didReceiveResponse response: SKProductsResponse) {
+        print(response.products.count)
+        print(response.invalidProductIdentifiers.count)
+    }
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         print(self.canvas?.frame.size)
