@@ -48,14 +48,15 @@ class ViewController: UIViewController,RappleColorPickerDelegate, UIImagePickerC
     var bottomImage :UIImage?
     var topImage :UIImage?
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-        print("Google Sdk Version " + GADRequest.sdkVersion())
         
-        //googleAd.adUnitID = "ca-app-pub-8468951005296370/9060383646"
+        print("Google Sdk Version " + GADRequest.sdkVersion())
+        //dem0 id ca-app-pub-3940256099942544/2934735716
+        
+        //orignal id = ca-app-pub-8468951005296370/9060383646
+        googleAd.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         googleAd.rootViewController = self
         googleAd.loadRequest(GADRequest())
         let path = NSBundle.mainBundle().pathForResource("Horn", ofType: "mp3")
@@ -74,11 +75,19 @@ class ViewController: UIViewController,RappleColorPickerDelegate, UIImagePickerC
         cameraTapped.numberOfTapsRequired = 1
         camera.addGestureRecognizer(cameraTapped)
         camera.userInteractionEnabled = true
-        
         requestProduct()
+        checkAndShowPurshasedItem()
     }
+    
     func playAudio(){
         audioPlayer.play()
+    }
+    func checkAndShowPurshasedItem(){
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let name = defaults.stringForKey("purchased"){
+            googleAd.hidden = true
+            
+        }
     }
     func mergeImage(botImage:UIImage,topImage:UIImage)->UIImage{
        
@@ -105,6 +114,7 @@ class ViewController: UIViewController,RappleColorPickerDelegate, UIImagePickerC
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         print(self.canvas?.frame.size)
+        checkAndShowPurshasedItem()
     }
     func colorSelected(color: UIColor) {
         chooseColorButton?.layer.backgroundColor = color.CGColor

@@ -17,6 +17,7 @@
 		0AB731C41CAE2C030096DBC1 /* roundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB731C31CAE2C030096DBC1 /* roundedButton.swift */; };
 		0AC4AB421CBE003200E0794A /* Initial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC4AB411CBE003200E0794A /* Initial.swift */; };
 		0AC4AB441CBE04F600E0794A /* Coin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0AC4AB431CBE04F600E0794A /* Coin.mp3 */; };
+		0AC4AB461CC09D4100E0794A /* buttonClick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0AC4AB451CC09D4100E0794A /* buttonClick.mp3 */; };
 		0AF4E17D1CBC4A24006F33C0 /* Horn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0AF4E17C1CBC4A24006F33C0 /* Horn.mp3 */; };
 		378E96AC185D639FA6B58CB3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0625E0E36D64CB2A3273B5A4 /* Pods.framework */; };
 /* End PBXBuildFile section */
@@ -35,6 +36,7 @@
 		0AB731C31CAE2C030096DBC1 /* roundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = roundedButton.swift; sourceTree = "<group>"; };
 		0AC4AB411CBE003200E0794A /* Initial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Initial.swift; sourceTree = "<group>"; };
 		0AC4AB431CBE04F600E0794A /* Coin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Coin.mp3; sourceTree = "<group>"; };
+		0AC4AB451CC09D4100E0794A /* buttonClick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = buttonClick.mp3; sourceTree = "<group>"; };
 		0AF4E17C1CBC4A24006F33C0 /* Horn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Horn.mp3; sourceTree = "<group>"; };
 		369E49FA73DAB03C3841EA2C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DE443336FD8B189744A32A08 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			children = (
 				0AC4AB431CBE04F600E0794A /* Coin.mp3 */,
 				0AF4E17C1CBC4A24006F33C0 /* Horn.mp3 */,
+				0AC4AB451CC09D4100E0794A /* buttonClick.mp3 */,
 				0AB731C51CAE2CA10096DBC1 /* Controller */,
 				0AB731C21CAE2BD60096DBC1 /* View */,
 				0A9810FA1CAC9C3C005C90D6 /* AppDelegate.swift */,
@@ -187,6 +190,7 @@
 				0AF4E17D1CBC4A24006F33C0 /* Horn.mp3 in Resources */,
 				0A9811021CAC9C3C005C90D6 /* Assets.xcassets in Resources */,
 				0AC4AB441CBE04F600E0794A /* Coin.mp3 in Resources */,
+				0AC4AB461CC09D4100E0794A /* buttonClick.mp3 in Resources */,
 				0A9811001CAC9C3C005C90D6 /* Main.storyboard in Resources */,
 				0A40F4851CBDE5EA009BE898 /* cartoon.jpg in Resources */,
 			);
