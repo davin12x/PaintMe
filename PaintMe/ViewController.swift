@@ -47,6 +47,7 @@ class ViewController: UIViewController,RappleColorPickerDelegate, UIImagePickerC
 //    var playStatus :Bool = false
     var bottomImage :UIImage?
     var topImage :UIImage?
+    var copyImage:UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -159,6 +160,7 @@ class ViewController: UIViewController,RappleColorPickerDelegate, UIImagePickerC
             CGContextSetLineWidth(context, strokeWidth)
             CGContextStrokePath(context)
             self.canvas?.image = UIGraphicsGetImageFromCurrentImageContext()
+            self.copyImage = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             firstPoint = point
             animation(true)
@@ -267,6 +269,14 @@ class ViewController: UIViewController,RappleColorPickerDelegate, UIImagePickerC
             
         }
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        if UIDevice.currentDevice().orientation.isLandscape{
+            print("i m in landscape mode")
+           // canvas?.image = nil
+            canvas?.contentMode = .ScaleToFill
+            canvas?.image = copyImage
+        }
     }
     
 }
