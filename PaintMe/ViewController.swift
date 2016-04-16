@@ -24,6 +24,7 @@ extension UIColor {
     }
 }
 class ViewController: UIViewController,RappleColorPickerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, SKProductsRequestDelegate {
+    @IBOutlet weak var roundButton: roundedButton!
     @IBOutlet weak var googleAd: GADBannerView!
     @IBOutlet weak var camera: UIImageView!
     @IBOutlet weak var backImage: UIImageView!
@@ -78,6 +79,7 @@ class ViewController: UIViewController,RappleColorPickerDelegate, UIImagePickerC
         camera.userInteractionEnabled = true
         requestProduct()
         checkAndShowPurshasedItem()
+        checkDeviceOrientation()
     }
     
     func playAudio(){
@@ -184,11 +186,6 @@ class ViewController: UIViewController,RappleColorPickerDelegate, UIImagePickerC
         randomAndEraserFalse()
         playAudio()
     }
-    @IBAction func yellowTapped(sender:UIButton){
-        colour(250, green: 214, blue: 74, alpha: 1)
-        randomAndEraserFalse()
-        playAudio()
-    }
     @IBAction func greenTapped(sender:UIButton){
         colour(0, green: 235, blue: 129, alpha: 1)
         randomAndEraserFalse()
@@ -271,11 +268,18 @@ class ViewController: UIViewController,RappleColorPickerDelegate, UIImagePickerC
         dismissViewControllerAnimated(true, completion: nil)
     }
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        checkDeviceOrientation()
+    }
+    func checkDeviceOrientation(){
         if UIDevice.currentDevice().orientation.isLandscape{
             print("i m in landscape mode")
-           // canvas?.image = nil
+            // canvas?.image = nil
             canvas?.contentMode = .ScaleToFill
             canvas?.image = copyImage
+            colorBar.distribution = .EqualSpacing
+        }
+        else{
+            colorBar.distribution = .EqualSpacing
         }
     }
     
