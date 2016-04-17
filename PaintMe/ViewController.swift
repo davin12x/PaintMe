@@ -53,12 +53,11 @@ class ViewController: UIViewController,RappleColorPickerDelegate, UIImagePickerC
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-        
         print("Google Sdk Version " + GADRequest.sdkVersion())
         //dem0 id ca-app-pub-3940256099942544/2934735716
         
         //orignal id = ca-app-pub-8468951005296370/9060383646
-        googleAd.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        googleAd.adUnitID = "ca-app-pub-8468951005296370/9060383646"
         googleAd.rootViewController = self
         googleAd.loadRequest(GADRequest())
         let path = NSBundle.mainBundle().pathForResource("Horn", ofType: "mp3")
@@ -93,16 +92,13 @@ class ViewController: UIViewController,RappleColorPickerDelegate, UIImagePickerC
         }
     }
     func mergeImage(botImage:UIImage,topImage:UIImage)->UIImage{
-       
         UIGraphicsBeginImageContext(self.backImage.frame.size)
-        
         let areaSize = CGRect(x: 0, y: 0, width: (self.backImage.frame.size.width), height: (self.backImage.frame.size.height))
         botImage.drawInRect(areaSize)
         topImage.drawInRect(CGRectMake(0, 0, topImage.size.width, topImage.size.height))
         let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return newImage
-        
     }
     func requestProduct(){
         let ids:Set<String> = ["com.Bagga.PaintMe"]
@@ -209,6 +205,7 @@ class ViewController: UIViewController,RappleColorPickerDelegate, UIImagePickerC
     }
     @IBAction func onClearPressed(sender:UIButton){
         self.canvas?.image = nil
+        copyImage = nil
         playAudio()
     }
     @IBAction func chooseColourPressed(sender: AnyObject) {
@@ -256,11 +253,11 @@ class ViewController: UIViewController,RappleColorPickerDelegate, UIImagePickerC
     func onCameraPressed(sender:UITapGestureRecognizer){
         playAudio()
         imagePicker.sourceType = .PhotoLibrary
-        imagePicker.allowsEditing = false
+        imagePicker.allowsEditing = true
         presentViewController(imagePicker, animated: true, completion: nil)
     }
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage{
+        if let pickedImage = info[UIImagePickerControllerEditedImage] as? UIImage{
             //canvas?.contentMode = .ScaleAspectFill
             backImage.image = pickedImage
             
@@ -273,12 +270,13 @@ class ViewController: UIViewController,RappleColorPickerDelegate, UIImagePickerC
     func checkDeviceOrientation(){
         if UIDevice.currentDevice().orientation.isLandscape{
             print("i m in landscape mode")
-            // canvas?.image = nil
             canvas?.contentMode = .ScaleToFill
             canvas?.image = copyImage
             colorBar.distribution = .EqualSpacing
         }
         else{
+            print("i m in Portrait mode")
+            canvas?.image = copyImage
             colorBar.distribution = .EqualSpacing
         }
     }
